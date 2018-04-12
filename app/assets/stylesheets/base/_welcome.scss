@@ -1,0 +1,24 @@
+.avatars{
+  list-style-type: none;
+  background: #ffffff;
+
+  strong{
+    width:100%;
+    display: inline-block;
+  }
+  span{
+    width:100%;
+    display: inline-block;
+  }
+  span.nombre{
+    text-align: center;
+    font-size: $fontPeque;
+    margin-bottom: $padding;
+  }
+  span.publicaciones{
+    margin-bottom: 0;
+    font-size: $fontMuyGrande*1.5;
+    font-weight: bold;
+    text-align: center;
+  }
+}

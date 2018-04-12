@@ -1,0 +1,23 @@
+
+<!--<a id="ver_mas" href="#">Ver mas</a>
+<div id="dani"></div>-->
+
+
+<!--<script>
+$("#ver_mas").on("click",function(ev){
+  ev.preventDefault();
+
+  $('#dani').remove();
+  $.getJSON( "/posts.json", function( data ) {
+
+    $.each( data, function( key, val ) {
+      $('#dani').append("<ul class='list-group posts'><%= j (render partial: 'post', collection: @posts) %></ul>");
+    });
+
+  });
+  $('#dani').append('<a id="ver_mas" href="#">Ver mas</a>');
+
+
+
+})
+</script>-->

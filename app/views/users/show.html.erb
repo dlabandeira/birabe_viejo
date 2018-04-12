@@ -1,0 +1,24 @@
+<%= link_to 'Nuevo usuario', new_user_registration_path %>
+<div class="row users-list-cabecera">
+  <span class="col-1">Avatar</span>
+  <span class="col-2">Nombre</span>
+  <span class="col-4">Apellidos</span>
+  <span class="col-3">Email</span>
+  <span class="col-1">Admin</span>
+  <span class="col-1"></span>
+</div>
+<% @users.each do |user| %>
+  <div class="row users-list">
+    <span class="col-1"><%=image_tag(user.image.url, class:"img-fluid img-rounded")%></span>
+    <span class="col-1"><%=image_tag('ico_avatar.jpg', class:"img-fluid img-rounded")%></span>
+    <span class="col-2"><%= user.nombre %></span>
+    <span class="col-4"><%= user.apellidos %></span>
+    <span class="col-3"><%= user.email %></span>
+    <% if user.admininistrador %>
+      <span class="col-1">Sí</span>
+    <% else %>
+      <span class="col-1">No</span>
+    <% end %>
+    <span class="col-1"><%= link_to 'Editar', edit_user_path(user) %></span>
+  </div>
+<% end %>

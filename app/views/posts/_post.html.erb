@@ -1,0 +1,28 @@
+<!--Barra de cabecera -->
+<li class="list-group-item active">
+  <div class="row ">
+    <div class="col-1"><%=image_tag('ico_avatar.jpg', class:"img-fluid img-rounded")%></div>
+    <div class="col-10 post-cabecera">
+      <strong><%= @post.user.nombre %> <%= @post.user.apellidos %></strong> ha creado un nuevo post<br/>
+      posteado el día <%= post.fecha %> a las <%= post.hora %>
+    </div>
+    <div class='col-1 post-list-link post-enlaces'>
+      <%= link_to 'Edit', @post, method: :edit %>
+      <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Estás seguro?' } %>
+    </div>
+
+  </div>
+</li>
+
+<!--Contenido del Post-->
+<li class="list-group-item">
+  <div class='post-contenido'><%= link_to post.contenido, @post %></div>
+  <div class='post-utilidades'>Me gusta | Comentar</div>
+</li>
+
+  <% show_comments(@post) %>
+  <ul>
+  <% @comentarios.each do |comentario| %>
+    <li><%= comentario.body %></li>
+  <% end %>
+  </ul>

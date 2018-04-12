@@ -1,0 +1,36 @@
+.posts{
+
+  .active{
+    margin-top:$padding;
+    color:$colorFondo1;
+    border-color:lighten($colorFondoClaro,5);
+    background: lighten($colorFondoClaro,5);
+  }
+  .post-cabecera{
+    margin: 0;
+    padding: 0;
+    font-size: $fontNormal;
+
+  }
+  .post-enlaces{
+    background: yellow;
+    font-size:5px;
+    margin: 0;
+    padding: 0;
+  }
+  .post-contenido{
+    width: 100%;
+
+    a{
+      color: $colorLetraOscuro;
+      text-decoration: none;
+    }
+  }
+  .post-utilidades{
+    width: 100%;
+    text-align: center;
+    margin-top: $padding;
+    background: green;
+  }
+
+}

@@ -1,0 +1,33 @@
+<div class='row avatars'>
+  <div class="col-12"><strong>Publicaciones</strong></div>
+  <div class="col-6"><span class="publicaciones"><%= @posts.count %></span><span class="nombre">Publicaciones hoy</span></div>
+  <div class="col-6"><span class="publicaciones"><%= @posts.count %></span><span class="nombre">Publicaciones totales</span></div>
+
+</div>
+
+<!--MIEMBROS-->
+<div class='row avatars '>
+  <p class="col-12"><strong>Últimos Miembros</strong></p>
+  <% @users.take(8).each do |user| %>
+    <div class="col-2 text-center"><%=image_tag(user.image.url, class:"img-fluid img-rounded")%><span class="nombre"><%=user.nombre%></span></div>
+  <% end %>
+</div>
+
+<!--ADMINISTRADORES-->
+<div class='row avatars text-center'>
+  <p class="col-12"><strong>Administradores y Moderadores</strong></p>
+  <% @admins.take(8).each do |user| %>
+    <div class="col-2 text-center"><%=image_tag(user.image.url, class:"img-fluid img-rounded")%><span class="nombre"><%=user.nombre%></span></div>
+  <% end %>
+</div>
+
+<!--+VISITADOS-->
+<div class='row avatars'>
+  <p class="col-12"><strong>Post más visitado</strong></p>
+</div>
+
+<!--+VALORADOS-->
+<div class='row avatars'>
+  <p class="col-12"><strong>Post más valorado</strong></p>
+</div>
+</div>

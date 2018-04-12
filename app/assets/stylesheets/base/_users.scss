@@ -1,0 +1,26 @@
+.users-list-cabecera{
+  padding-top:$padding;
+  padding-bottom:$padding;
+  list-style-type: none;
+  background-color: $colorFondo2;
+  color: $colorLetraClaro;
+}
+.users-list{
+  list-style-type: none;
+  height:100%;
+  background-color: darken(#ffffff,12);
+
+  &:nth-child(even){
+    background-color: #ffffff;
+  }
+  span{
+    margin-top:5px;
+    margin-bottom:5px;
+    display:flex;
+    align-items:center;
+
+    img{
+      max-height: 70px;
+    }
+  }
+}

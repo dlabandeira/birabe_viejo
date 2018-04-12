@@ -1,0 +1,31 @@
+
+<div class="row posts">
+    <div class="col-1 active"><%=image_tag('ico_avatar.jpg', class:"img-fluid img-rounded")%></div>
+    <div class="col-10 post-cabecera active">
+      <strong><%= @post.user.nombre %> <%= @post.user.apellidos %></strong> ha creado un nuevo post<br/>
+      posteado el día <%= @post.fecha %> a las <%= @post.hora %>
+    </div>
+    <div class='col-1 post-list-link post-enlaces active'>
+      <%= link_to 'Edit', edit_post_path(@post) %>
+      <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+
+  <!--Contenido del Post-->
+  <div class='post-contenido'><%= link_to @post.contenido, @post %></div>
+  <div class='post-utilidades'>Me gusta | Comentar</div>
+
+</div>
+
+<div class="fields">
+<h3>comentarios</h3>
+<ul>
+    <% @comments.each do |comment| %>
+        <li><%= comment.body %> - <%= comment.user.nombre %> <%= comment.user.apellidos %></li>
+    <% end %>
+</ul>
+<br>
+
+
+
+  <%= render "comments/form" %>
+</div>

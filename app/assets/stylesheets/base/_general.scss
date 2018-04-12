@@ -1,0 +1,47 @@
+.container-fluid{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+body{
+  font-family:$font-family;
+  font-size: $fontNormal;
+  background:$colorFondoClaro;
+}
+header{
+  background: $colorFondo1;
+  color: $colorLetraClaro;
+  padding:$padding;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 500;
+
+
+  .logo{
+    font-weight: bold;
+    font-size:$fontGrande;
+  }
+}
+
+#content{
+  margin-top: 60px;
+  padding-top:$padding;
+  padding-bottom:$padding;
+
+  h1{
+    padding-top:$padding;
+    padding-bottom:$padding;
+
+  }
+  p{text-align: justify;}
+
+}
+footer{
+  background: $colorFondo2;
+  color: $colorLetraClaro;
+}
+
+.derecha{
+  text-align:justify;
+}
